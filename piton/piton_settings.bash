@@ -7,6 +7,8 @@
 #   some .bashrc script, to point to the princeton Piton        #
 #   prcessor git repository.                                    #
 #################################################################
+basedir=$(dirname "$BASH_SOURCE")
+source $basedir/.setenv_op
 
 export DV_ROOT=$PITON_ROOT/piton
 export MODEL_DIR=$PITON_ROOT/build

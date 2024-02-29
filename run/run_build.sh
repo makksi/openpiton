@@ -9,6 +9,7 @@
 # -sys:
 #--------------------------------------------
 # build
+cd ../build
 #sims -sys=manycore -x_tiles=1 -y_tiles=1 -icv_build
 #sims -sys=manycore -x_tiles=1 -y_tiles=1 -icv_build -clean #no incremental compile
 #sims -sys=manycore -x_tiles=1 -y_tiles=1 -icv_build -clean -debug_all #no incremental compile,to use gui after sim

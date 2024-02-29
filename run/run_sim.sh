@@ -9,6 +9,7 @@
 # -sys:
 #--------------------------------------------
 
+cd ../build
 # simulations tests
 #sims -sys=manycore -x_tiles=1 -y_tiles=1 -icv_run -gui princeton-test-test.s #-gui requires -build_all 
 #sims -sys=manycore -x_tiles=3 -y_tiles=3 -icv_run -gui princeton-test-test.s -build_id=tiles_3x3 #-gui requires -build_all 

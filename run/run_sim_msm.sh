@@ -9,6 +9,7 @@
 # -sys:
 #--------------------------------------------
 
+cd ../build
 #export LD_LIBRARY_PATH=/home/makksi/etronic/openpiton/piton/tools/src/goldfinger/lib
 #export LD_LIBRARY_PATH=/usr/lib/i386-linux-gnu:/home/makksi/etronic/openpiton/piton/tools/src/goldfinger/lib
 

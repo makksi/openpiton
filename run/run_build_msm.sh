@@ -9,6 +9,7 @@
 # -build_id: name ref of compiled model
 # -sys: 
 #--------------------------------------------
+cd ../build
 #sims -sys=manycore -x_tiles=3 -y_tiles=3 -icv_build -clean -debug_all -build_id=tiles_3x3 
 sims -sys=manycore -x_tiles=1 -y_tiles=1 -msm_build -clean -debug_all -build_id=tiles_msm_1x1 
 #sims -sys=ifu_esl_counter -msm_build -clean -debug_all -build_id=ifu_esl_counter_msm 
