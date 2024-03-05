@@ -153,6 +153,11 @@ always #25000 spi_sys_clk = ~spi_sys_clk;                       // 20MHz
 ////////////////////////////////////////////////////////
 // SIMULATED BOOT SEQUENCE
 ////////////////////////////////////////////////////////
+initial
+begin
+$dumpfile("cmp_top.vcd");
+$dumpvars(0, cmp_top);
+end
 
 `ifndef VERILATOR
 initial
