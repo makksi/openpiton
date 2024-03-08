@@ -1,0 +1,34 @@
+git remote: visualizza i repository remoti associati al mio repository locale
+git remote -v: ...col path
+git remote remove <nome-remoto>: rimuove un rep remoto associato al rep locale
+git remote add <rep_name><github https://myrep.git>
+
+
+git branch: indica i branch nel repository locale
+git branch <branch_name>: crea un nuovo branch di nome branch name
+git switch branch_name: per cambiare branch (quello con asterisco è il corrente)
+
+git pull: fetcha dal repository ,chiamato origin se ci sono più repository definiti (guarda con git remote -v)
+git pull <remote> <branch>: fetcha dal repository ,chiamato <remote> ed eventualmente dal branch <branch>
+
+
+file .gitignore: i file indicati non vengono tracciati e quindi nè con il push nè con il pull vengono considerati 
+
+git status: fa vedere lo stato dei files
+ 
+git push openpiton_maks openpiton (push to my rep current branch "openpiton"....see git branch)
+
+
+DETACHED HEAD
+If you want to keep your changes associated with the detached HEAD
+Run git branch tmp - this will save your changes in a new branch called tmp.
+Run git checkout master
+If you would like to incorporate the changes you made into master, run git merge tmp from the master branch. You should be on the master branch after running git checkout master.
+If you want to delete your changes associated with the detached HEAD
+You only need to checkout the branch you were on, e.g.
+
+git checkout master
+Next time you have changed a file and want to restore it to the state it is in the index, don't delete the file first, just do
+
+git checkout -- path/to/foo
+This will restore the file foo to the state it is in the index.
