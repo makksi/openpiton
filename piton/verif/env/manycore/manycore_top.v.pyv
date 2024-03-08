@@ -153,11 +153,18 @@ always #25000 spi_sys_clk = ~spi_sys_clk;                       // 20MHz
 ////////////////////////////////////////////////////////
 // SIMULATED BOOT SEQUENCE
 ////////////////////////////////////////////////////////
-initial
-begin
-$dumpfile("cmp_top.vcd");
-$dumpvars(0, cmp_top);
-end
+`ifdef __ICARUS__
+    if ($test$plusargs("vcd"))
+		initial
+    	begin
+				$dumpfile("waves.vcd");
+				$dumpvars(0, cmp_top);
+//        $dumpfile("myvcd.vcd");
+//        $dumpall();
+//        $dumpvars(1, cmp_top.system.chip.tile0);
+//        $dumpvars(1, cmp_top.system.chip.tile0.g_core);
+    	end
+`endif
 
 `ifndef VERILATOR
 initial
