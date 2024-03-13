@@ -69,16 +69,18 @@ fi
 # PITON setup
 ################################
 
+source ./piton/piton_settings.bash
+
 # set root directory
 export PITON_ROOT=`pwd`
-export ARIANE_ROOT=${PITON_ROOT}/piton/design/chip/tile/ariane/
+export ARIANE_ROOT=${PITON_ROOT}/piton/design/chip/tile/ariane
 
 ## GCC and RISCV GCC setup
 export CXX=g++ CC=gcc
 # customize this to a fast local disk
 #export RISCV=/scratch/`whoami`/riscv_install
 export RISCV=/home/`whoami`/riscv_install
-export VERILATOR_ROOT=$ARIANE_ROOT/tmp/verilator-4.014/
+#export VERILATOR_ROOT=$ARIANE_ROOT/tmp/verilator-4.014/
 
 # setup paths
 export PATH=$RISCV/bin:$VERILATOR_ROOT/bin:$PATH
@@ -89,7 +91,6 @@ export CPLUS_INCLUDE_PATH=$RISCV/include:$VERILATOR_ROOT/include
 
 # source OpenPiton setup script
 # note: customize this script to reflect your tool setup
-source ./piton/piton_settings.bash
 
 if [[ $(readlink -e "${RISCV}/bin/spike") == "" ]]
 then
