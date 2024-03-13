@@ -1,7 +1,8 @@
 export EDA_HOME=/home/makksi/etronic
 export PITON_ROOT=$EDA_HOME/openpiton
-export ICARUS_HOME=/usr
+export VERILATOR_ROOT=/home/makksi/etronic/verilator
+#export ICARUS_HOME=/usr
 #export MODEL_DIR=$PITON_ROOT/build
 #export MODELSIM_HOME=$PITON_ROOT/../modelsim/intelFPGA/20.1/modelsim_ase
-export MODELSIM_HOME=$EDA_HOME/questa/intelFPGA/23.1std/questa_fse
+#export MODELSIM_HOME=$EDA_HOME/questa/intelFPGA/23.1std/questa_fse
 export LM_LICENSE_FILE=$EDA_HOME/questa/intelFPGA/23.1std/questa_fse/license.dat:$LM_LICENSE_FILE
