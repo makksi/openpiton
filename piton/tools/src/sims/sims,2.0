@@ -1236,6 +1236,11 @@ sub create_model_path
 {
     my $cur_dir = $ENV{PWD};
 
+    if ($opt{clean}) {
+      print "$prg: removing old model directory $model_path\n" ;
+      `rm -rf $model_path` ;
+    }
+
     print "$prg: creating model directory $model_path\n" ;
     `mkdir -p $model_path` ;
     die ("DIE. could not create directory $model_path") if ($?) ;
