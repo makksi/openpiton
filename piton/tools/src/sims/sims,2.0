@@ -1538,7 +1538,7 @@ sub generic_sim_build
       # also suppress the following warning, which unfortunately is hardly avoidable when using
       # always_comb blocks that operate on arrays inside a generate statement.
       # [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported.
-      $build_cmd .= " -suppress 2583 -suppress 14408 -suppress 8386 ";
+      $build_cmd .= " -suppress 2583 -suppress 14408 -suppress 8386 -suppress 16154 ";
     }
     if ($opt{riv_build}) {
       $build_cmd = "vlib work; vlog " ;
@@ -1790,7 +1790,7 @@ sub generic_sim_run
       }
       if ($opt{log_all}) {
       	# this logs everything such that the sim can be inspected later on
-      	print("$prg: dumping all waves to save.wlf - this file can get very large so make sure you run this on a fast disk with enough space.\n");
+      	print("$prg: dumping all waves to all-waves.wlf - this file can get very large so make sure you run this on a fast disk with enough space.\n");
       	$cmd .= " -wlfcompress -wlf all-waves.wlf -do \"log -r /*\" ";
       }
       $cmd .= "-lib ";
