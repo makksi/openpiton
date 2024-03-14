@@ -30,7 +30,7 @@ build="${sim}${suff}"
 
 #VERILATOR
 #sims -sys=manycore -x_tiles=1 -y_tiles=1 -vlt_build -clean -build_id=tiles_1x1_vlt -vlt_build_args=--trace -vlt_build_args="-CFLAGS -DVERILATOR_VCD"
-sims -sys=manycore -x_tiles=1 -y_tiles=1 -vlt_build -clean -build_id=tiles_1x1_vlt_ariane -vlt_build_args=--tracet -vlt_build_args="-CFLAGS -DVERILATOR_VCD" -ariane
+sims -sys=manycore -x_tiles=1 -y_tiles=1 -vlt_build -clean -build_id=tiles_1x1_vlt_ariane -vlt_build_args=--trace -vlt_build_args="-CFLAGS -DVERILATOR_VCD" -ariane
 
 #MODELSIM
 #########sims -sys=manycore -x_tiles=1 -y_tiles=1 -msm_build -clean -build_id=tiles_1x1_msm_ariane -ariane
