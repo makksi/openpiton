@@ -70,6 +70,7 @@ fi
 ################################
 
 source ./piton/piton_settings.bash
+export ARIANE_SET=1;
 
 # set root directory
 export PITON_ROOT=`pwd`
